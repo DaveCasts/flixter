@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-light a.navbar-brand {
-  color: #32a0b8;
+  color: #17b36a;
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
   font-size: 26px;
@@ -25,4 +25,37 @@ body {
 
 .navbar-light .navbar-nav .nav-link:hover{
   color: white !important;
+}
+
+.hero {
+  background: image_url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+
+
+
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+.frosty {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  h1 {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
+
+  h2 {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 200;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
 }
