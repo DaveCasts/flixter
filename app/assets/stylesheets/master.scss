@@ -3,6 +3,7 @@
 
 body {
   background: image_url('folk-pattern');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
 .navbar {
@@ -17,7 +18,10 @@ body {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
   font-size: 26px;
+  &:hover {
+    color: white;
   }
+}
 
 .navbar-light .navbar-nav .nav-link{
     color: #32a0b8 !important;
@@ -34,9 +38,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 370px;
-
-
-
+  box-shadow: 0px 3px 8px #2a2a2a;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
@@ -59,3 +61,22 @@ h1, h2, h3, h4, h5, h6, .navbar {
     text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
   }
 }
+
+.btn {
+  border-radius: 0;
+}
+
+.navbar-toggler {
+  color: rgba(23, 179, 106, 0.5);
+  border-color: rgb(23, 179, 106) !important;
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(23,179,106, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
