@@ -1,6 +1,8 @@
 class Course < ApplicationRecord
+  mount_uploader :image, ImageUploader
   belongs_to :user
   has_many :sections
+  has_many :lessons
 
   validates :title, presence: true, length: {minimum: 3, maximum: 100}
   validates :description, presence: true, length: {minimum: 3, maximum: 250}
