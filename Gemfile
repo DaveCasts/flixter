@@ -65,13 +65,15 @@ gem 'jquery-rails'
 
 gem 'popper_js', '~> 1.14.5'
 gem 'bootstrap', '~> 4.3.1'
-gem 'simple_form'
+gem 'simple_form', ">= 5.0.0"
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'figaro'
 gem 'fog-aws'
 gem 'mini_magick'
 gem 'carrierwave-aws'
+gem "rubyzip", ">= 1.3.0"
+gem 'stripe'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
