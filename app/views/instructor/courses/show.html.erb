@@ -6,7 +6,7 @@
     <%= current_course.title %>
   </h1>
 
-  <%= image_tag @course.image, class: 'img-fluid' %>
+  
 
   <br />
 
@@ -29,7 +29,7 @@
           <ul>
             
               <li>
-                <% current_section.lessons.each do |lesson| %>
+                <% section.lessons.each do |lesson| %>
 
                   <b><%= lesson.title %></b>
                   -
