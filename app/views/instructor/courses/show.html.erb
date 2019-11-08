@@ -12,6 +12,47 @@
     
   <% end %>
 
+ <!--  <script>
+    $(function() {
+      $('.sections').sortable({
+        update: function( event, ui ) {
+          $.ajax({
+            type: 'PUT',
+            url: ui.item.data('update-url'),
+            dataType: 'json',
+            data: { session: { row_order_position: ui.item.index() } }
+          });
+        }
+      });
+    });
+  </script> -->
+
+<script>
+  $(function() {
+    $('.lessons').sortable({
+      update: function( event, ui ) {
+          alert("UpdateUrl: " + ui.item.data('update-url') + " Index: " + ui.item.index());
+      }
+    });
+  });
+</script>
+
+
+<!--   <script>
+    $(function() {
+      $('.lessons').sortable({
+        update: function( event, ui ) {
+          $.ajax({
+            type: 'PUT',
+            url: ui.item.data('update-url'),
+            dataType: 'json',
+            data: { lesson: { row_order_position: ui.item.index() } }
+          });
+        }
+      });
+    });
+  </script> -->
+
   <br />
 
   <%= link_to 'Preview as a Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
@@ -29,20 +70,17 @@
   <ul>
     <% current_course.sections.each do |section| %>
       <li>
-        
           <%= section.title %>
           <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
-          <ul>
-            
-              <li>
-                <% section.lessons.each do |lesson| %>
-
+          <ul class="lessons">
+            <% section.lessons.rank(:row_order).each do |lesson| %>
+              <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+                <b><%= instructor_lesson_path lesson %></b>
                   <b><%= lesson.title %></b>
                   -
                   <%= lesson.subtitle %>
                 <% end %>
               </li>
-            
           </ul>
 
     <br class="clr" />
