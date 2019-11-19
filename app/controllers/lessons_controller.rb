@@ -3,7 +3,6 @@ class LessonsController < ApplicationController
   before_action :require_authorized_for_current_lesson_section_course, only: [:show]
 
   def show 
-    current_lesson
   end
 
   private
